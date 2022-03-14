@@ -1,0 +1,10 @@
+D:\progs\CheckTD\CheckTD\CheckTD\bin\Release\CheckTD.exe.config
+D:\progs\CheckTD\CheckTD\CheckTD\bin\Release\CheckTD.exe
+D:\progs\CheckTD\CheckTD\CheckTD\bin\Release\CheckTD.pdb
+D:\progs\CheckTD\CheckTD\CheckTD\obj\Release\CheckTD.csproj.AssemblyReference.cache
+D:\progs\CheckTD\CheckTD\CheckTD\obj\Release\CheckTD.MainForm.resources
+D:\progs\CheckTD\CheckTD\CheckTD\obj\Release\CheckTD.Properties.Resources.resources
+D:\progs\CheckTD\CheckTD\CheckTD\obj\Release\CheckTD.csproj.GenerateResource.cache
+D:\progs\CheckTD\CheckTD\CheckTD\obj\Release\CheckTD.csproj.CoreCompileInputs.cache
+D:\progs\CheckTD\CheckTD\CheckTD\obj\Release\CheckTD.exe
+D:\progs\CheckTD\CheckTD\CheckTD\obj\Release\CheckTD.pdb

@@ -3,87 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CheckTD.Properties;
 
 namespace CheckTD
 {
     class TNVED_Codes
     {
-        private static Dictionary<int, string[]> codes;
-        private static Dictionary<int, string[]> excludedCodes;
+        public static Dictionary<int, string[]> Codes { get; private set; }
+        public static Dictionary<int, string[]> ExcludedCodes { get; private set; }
 
 
-        public static Dictionary<int, string[]> Codes
+        public static void Initialize()
         {
-            get
-            {
-                if(codes == null)
-                {
-                    codes = new Dictionary<int, string[]>();
-                    codes.Add(311, codes311);
-                    codes.Add(312, codes312);
-                    codes.Add(313, codes313);
-                }
-                return codes;
-            }
+            Codes = new Dictionary<int, string[]>();
+            Codes.Add(311, Resources.cods311.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries));
+            Codes.Add(312, Resources.cods312.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries));
+            Codes.Add(313, Resources.cods313.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries));
+
+            //foreach(var c in Codes)
+            //    foreach (var code in c.Value)
+            //        Console.WriteLine($"law: {c.Key}, code: {code}");
+
+            //Console.WriteLine();
+
+            ExcludedCodes = new Dictionary<int, string[]>();
+            ExcludedCodes.Add(312, Resources.codsExcluded312.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries));
+
+            //foreach (var exc in ExcludedCodes)
+            //    foreach (var code in exc.Value)
+            //        Console.WriteLine($"law: {exc.Key}, Ex code: {code}");
+
+            //Console.WriteLine($"law: 311, codes count: {Codes[311].Length}");
+            //Console.WriteLine($"law: 312, codes count: {Codes[312].Length}");
+            //Console.WriteLine($"law: 313, codes count: {Codes[313].Length}");
+            //Console.WriteLine($"law: 312, ex codes count: {ExcludedCodes[312].Length}");
         }
 
 
-        public static Dictionary<int, string[]> ExcludedCodes
-        {
-            get
-            {
-                if (excludedCodes == null)
-                {
-                    excludedCodes = new Dictionary<int, string[]>();
-                    excludedCodes.Add(311, excludedСodes311);
-                    excludedCodes.Add(312, excludedСodes312);
-                    excludedCodes.Add(313, excludedСodes313);
-                }
-                return codes;
-            }
-        }
-
-
-
-
-        private static string[] codes311 =
-        {
-            "300610",
-            "3006400000",
-            "3006700000",
-            "3815199000"
-        };
-
-        private static string[] codes312 =
-        {
-            "",
-            "",
-            "",
-            ""
-        };
-
-        private static string[] codes313 =
-        {
-            "",
-            "",
-            "",
-            ""
-        };
-
-        private static string[] excludedСodes311 =
-        {
-            
-        };
-
-        private static string[] excludedСodes312 =
-        {
-            "820559"
-        };
-
-        private static string[] excludedСodes313 =
-        {
-            
-        };
 
     }
 }
